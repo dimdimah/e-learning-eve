@@ -1,0 +1,108 @@
+# ========================================================
+# 1. Environment & Credentials (Rahasia / Konfigurasi Lokal)
+# ========================================================
+.env
+.env.backup
+.env.production
+.env.*.local
+auth.json
+
+# ========================================================
+# 2. Media & Video Files (File Binary Besar)
+# ========================================================
+*.mp4
+*.mov
+*.avi
+*.webm
+*.mkv
+*.m4v
+*.3gp
+*.flv
+*.wmv
+/storage/app/private/videos/*
+!/storage/app/private/videos/.gitignore
+/public/storage
+
+# ========================================================
+# 3. Database & Cache Lokal
+# ========================================================
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+database/*.sqlite
+database/*.sqlite-journal
+database/*.sqlite-shm
+database/*.sqlite-wal
+.phpunit.result.cache
+/.phpunit.cache
+
+# ========================================================
+# 4. Storage & Log Runtime
+# ========================================================
+*.log
+/storage/*.key
+/storage/pail
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/cache/locks/*
+!/storage/framework/cache/locks/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# ========================================================
+# 5. Dependensi (Package Vendors)
+# ========================================================
+/vendor/
+/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ========================================================
+# 6. Kompilasi Aset Frontend (Build Artifacts)
+# ========================================================
+/public/build/
+/public/hot
+/public/fonts-manifest.dev.json
+
+# ========================================================
+# 7. AI Assistants & MCP Tools (Internal Dev / Penilai Bersih)
+# ========================================================
+.agents/
+.claude/
+.gemini/
+.mcp.json
+boost.json
+opencode.json
+AGENTS.md
+CLAUDE.md
+/scratch/
+
+# ========================================================
+# 8. IDE & Code Editor
+# ========================================================
+/.idea/
+/.vscode/
+/.cursor/
+/.zed/
+/.nova/
+/.codex/
+*.swp
+*.swo
+*~
+.phpactor.json
+_ide_helper.php
+
+# ========================================================
+# 9. Sistem Operasi & Virtualisasi
+# ========================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+Homestead.json
+Homestead.yaml

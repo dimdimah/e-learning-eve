@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Evaly Design System - CSS Variables */
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10.9%;
+    --primary-foreground: 0 0% 98%;
+    --border: 240 5.9% 90.9%;
+
+    /* Evaly brand colors */
+    --evaly-red: #FF5F57;
+    --evaly-yellow: #FFBD2E;
+    --evaly-green: #28CA41;
+}
+
+/* Dark mode */
+.dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10.9%;
+    --border: 240 3.7% 15.9%;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer utilities {
+    /* Evaly utility classes */
+    .evaly-btn-primary {
+        @apply inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150;
+    }
+
+    .evaly-btn-secondary {
+        @apply inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-full border border-border bg-card text-primary hover:text-muted-foreground transition-colors duration-150;
+    }
+
+    .evaly-card {
+        @apply rounded-xl border border-border bg-background overflow-hidden;
+    }
+
+    .evaly-badge {
+        @apply inline-flex items-center gap-1.5 px-2 py-1 text-xs font-medium rounded-full;
+    }
+
+    .evaly-badge-green {
+        @apply bg-green-100 text-green-700;
+    }
+
+    .evaly-badge-yellow {
+        @apply bg-yellow-100 text-yellow-700;
+    }
+
+    .evaly-badge-red {
+        @apply bg-red-100 text-red-700;
+    }
+
+    .evaly-badge-gray {
+        @apply bg-gray-100 text-gray-700;
+    }
+}
